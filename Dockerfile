@@ -4,7 +4,7 @@ FROM --platform=linux/amd64 ubuntu:20.04 as builder
 ## Install build dependencies.
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y cmake clang
-RUN apt-get install -y cargo
+RUN apt-get install -y cargo curl
 
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 RUN rustup default nightly
