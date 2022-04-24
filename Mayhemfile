@@ -1,5 +1,5 @@
-project: mayhem-cmake-example
-target: fuzzme
+project: saffron
+target: default
 
 cmds:
-  - cmd: /fuzzme
+  - cmd: /default
