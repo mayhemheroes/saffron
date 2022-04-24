@@ -6,8 +6,8 @@ RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y cmake clang
 RUN apt-get install -y cargo curl
 
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-RUN rustup default nightly
+RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
+RUN rustup -y default nightly
 
 ## Add source code to the build stage.
 ADD . /saffron
