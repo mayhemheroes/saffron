@@ -8,11 +8,10 @@ RUN apt-get install -y cargo
 
 ## Add source code to the build stage.
 ADD . /saffron
-WORKDIR /saffron
+WORKDIR /saffron/saffron/fuzz 
 
 ## TODO: ADD YOUR BUILD INSTRUCTIONS HERE.
-RUN cd saffron/fuzz
-RUN cargo build
+RUN cargo build --release
 
 # Package Stage
 FROM --platform=linux/amd64 ubuntu:20.04
