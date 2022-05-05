@@ -1,0 +1,5 @@
+project: saffron
+target: default
+
+cmds:
+  - cmd: /default
